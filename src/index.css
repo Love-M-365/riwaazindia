@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-primary: #3E2723; /* Even deeper, more majestic brown */
+  --color-secondary: #D4AF37; /* True Metallic Gold */
+  --color-accent: #7B1F1F; /* Royal Crimson */
+  --color-warm-bg: #FDFBF7; /* Creamier, more luxurious background */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-warm-bg text-gray-900 font-sans antialiased;
+    background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png"); /* Subtle texture */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/60 backdrop-blur-2xl border border-secondary/20 shadow-[0_20px_50px_rgba(0,0,0,0.05)];
+}
+
+@utility gold-gradient {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+}
+
+@utility gold-text {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.royal-border {
+  position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.royal-border::before, .royal-border::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #D4AF37;
+}
+
+.royal-border-tl::before { top: -2px; left: -2px; border-right: 0; border-bottom: 0; }
+.royal-border-tr::after { top: -2px; right: -2px; border-left: 0; border-bottom: 0; }
+.royal-border-bl::before { bottom: -2px; left: -2px; border-right: 0; border-top: 0; }
+.royal-border-br::after { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
+
+.ornate-divider {
+  @apply flex items-center justify-center gap-4 my-12;
+}
+
+.ornate-divider::before, .ornate-divider::after {
+  content: '';
+  @apply h-px flex-1 bg-gradient-to-r from-transparent via-secondary/40 to-transparent;
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.elegant-shadow {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
