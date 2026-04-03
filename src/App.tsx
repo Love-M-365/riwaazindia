@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Calendar, MapPin, Sparkles, Phone, Mail, Send, Star, Music, Flower2, Building2, Menu, X , Instagram, Facebook, Twitter } from "lucide-react";
 import { useState, useEffect } from "react";
-import matakichowki from "./matakichowki.jpg";
+import matakichowki from "./MataKiChowki.jpg";
 import wedding from "./wedding.jpg";
 import birthday from "./birthday.jpg";
 import events from "./events.jpg";
