@@ -142,6 +142,48 @@ import w200 from "./assets/w200.mp4";
 import coperatee from "./assets/coperate.jpg";
 
 // ─────────────────────────────────────────────────────────────────────────────
+// ─── Haldi / Mehndi Assets ─────────────────────────────────────────────────────
+import h1  from "./assets/h1.jpeg";
+import h2  from "./assets/h2.jpeg";
+import h3  from "./assets/h3.jpeg";
+import h4  from "./assets/h4.jpeg";
+import h5  from "./assets/h5.jpeg";
+import h6  from "./assets/h6.jpeg";
+import h7  from "./assets/h7.jpeg";
+import h8  from "./assets/h8.jpeg";
+import h9  from "./assets/h9.jpeg";
+import h10 from "./assets/h10.jpeg";
+import h11 from "./assets/h11.jpeg";
+import h12 from "./assets/h12.jpeg";
+import h13 from "./assets/h13.jpeg";
+import h14 from "./assets/h14.jpeg";
+import h15 from "./assets/h15.jpeg";
+import h16 from "./assets/h16.jpeg";
+import h17 from "./assets/h17.jpeg";
+import h18 from "./assets/h18.jpeg";
+import h19 from "./assets/h19.jpeg";
+import h20 from "./assets/h20.jpeg";
+import h21 from "./assets/h21.jpeg";
+import h22 from "./assets/h22.mp4";
+import h23 from "./assets/h23.mp4";
+import h24 from "./assets/h24.mp4";
+import h25 from "./assets/h25.jpeg";
+import h26 from "./assets/h26.mp4";
+
+// ─── Extra Birthday Assets (b201–b213) ────────────────────────────────────────
+import b201 from "./assets/b201.mp4";
+import b202 from "./assets/b202.mp4";
+import b203 from "./assets/b203.jpeg";
+import b204 from "./assets/b204.mp4";
+import b205 from "./assets/b205.mp4";
+import b206 from "./assets/b206.mp4";   // video — film strip icon visible
+import b207 from "./assets/b207.jpeg";
+import b208 from "./assets/b208.jpeg";
+import b209 from "./assets/b209.jpeg";
+import b210 from "./assets/b210.jpeg";
+import b211 from "./assets/b211.jpeg";
+import b212 from "./assets/b212.mp4";
+import b213 from "./assets/b213.jpeg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -397,6 +439,19 @@ const galleryCategories = [
       { type: "image", url: b56, title: "Luxury Birthday",      tag: "BIRTHDAY" },
       { type: "image", url: b67, title: "Royal Celebration",    tag: "BIRTHDAY" },
       { type: "video", url: b78, title: "Birthday Gala",        tag: "BIRTHDAY" },
+      { type: "video", url: b201, title: "Character Mascot",     tag: "BIRTHDAY" },
+      { type: "video", url: b202, title: "Gorilla Entry",        tag: "BIRTHDAY" },
+      { type: "image", url: b203, title: "Donald Duck",          tag: "BIRTHDAY" },
+      { type: "video", url: b204, title: "Stitch Mascot",        tag: "BIRTHDAY" },
+      { type: "video", url: b205, title: "Panda Fun",            tag: "BIRTHDAY" },
+      { type: "video", url: b206, title: "Spiderman Clip",       tag: "BIRTHDAY" },
+      { type: "image", url: b207, title: "Puppet Show",          tag: "BIRTHDAY" },
+      { type: "image", url: b208, title: "Character Parade",     tag: "BIRTHDAY" },
+      { type: "image", url: b209, title: "Trio Entry",           tag: "BIRTHDAY" },
+      { type: "image", url: b210, title: "Tiger Mascot",         tag: "BIRTHDAY" },
+      { type: "image", url: b211, title: "Mickey Mouse",         tag: "BIRTHDAY" },
+      { type: "image", url: b212, title: "Blue Bear",            tag: "BIRTHDAY" },
+      { type: "image", url: b213, title: "Teddy Bear",           tag: "BIRTHDAY" },
     ],
   },
   {
@@ -599,11 +654,46 @@ const galleryCategories = [
       ],
     },
   },
+  {
+    id: "HaldiMehndi",
+    label: "Haldi & Mehndi",
+    icon: Flower2,
+    subfolders: null,
+    items: [
+      { type: "image", url: h1,  title: "Entrance Draping",      tag: "HALDI & MEHNDI" },
+      { type: "image", url: h2,  title: "Venue Facade",          tag: "HALDI & MEHNDI" },
+      { type: "image", url: h3,  title: "Stage Backdrop",        tag: "HALDI & MEHNDI" },
+      { type: "image", url: h4,  title: "Colorful Canopy",       tag: "HALDI & MEHNDI" },
+      { type: "image", url: h5,  title: "Floral Stage",          tag: "HALDI & MEHNDI" },
+      { type: "image", url: h6,  title: "Mandap Decor",          tag: "HALDI & MEHNDI" },
+      { type: "image", url: h7,  title: "Bridal Arch",           tag: "HALDI & MEHNDI" },
+      { type: "image", url: h8,  title: "Puja Setup",            tag: "HALDI & MEHNDI" },
+      { type: "image", url: h9,  title: "Ritual Corner",         tag: "HALDI & MEHNDI" },
+      { type: "image", url: h10, title: "Haldi Stage",           tag: "HALDI & MEHNDI" },
+      { type: "image", url: h11, title: "Drape Curtains",        tag: "HALDI & MEHNDI" },
+      { type: "image", url: h12, title: "Ribbon Decor",          tag: "HALDI & MEHNDI" },
+      { type: "image", url: h13, title: "Mehndi Backdrop",       tag: "HALDI & MEHNDI" },
+      { type: "image", url: h14, title: "Festive Strings",       tag: "HALDI & MEHNDI" },
+      { type: "image", url: h15, title: "Green Gold Drapes",     tag: "HALDI & MEHNDI" },
+      { type: "image", url: h16, title: "Patola Decor",          tag: "HALDI & MEHNDI" },
+      { type: "image", url: h17, title: "Traditional Panel",     tag: "HALDI & MEHNDI" },
+      { type: "image", url: h18, title: "Vibrant Entrance",      tag: "HALDI & MEHNDI" },
+      { type: "image", url: h19, title: "Open Stage Setup",      tag: "HALDI & MEHNDI" },
+      { type: "image", url: h20, title: "Diamond Decor",         tag: "HALDI & MEHNDI" },
+      { type: "image", url: h21, title: "Golden Stage",          tag: "HALDI & MEHNDI" },
+      { type: "video", url: h22, title: "Shaadi Signage",        tag: "HALDI & MEHNDI" },
+      { type: "video", url: h23, title: "Ceiling Decor",         tag: "HALDI & MEHNDI" },
+      { type: "video", url: h24, title: "Night Draping",         tag: "HALDI & MEHNDI" },
+      { type: "image", url: h25, title: "Lights & Drapes",       tag: "HALDI & MEHNDI" },
+      { type: "video", url: h26, title: "Outdoor Setup",         tag: "HALDI & MEHNDI" },
+    ],
+  },
 ];
 // ─── Gallery Component ─────────────────────────────────────────────────────────
+
 const Gallery = () => {
   const ITEMS_PER_PAGE = 12;
-  const [activeCategory, setActiveCategory] = useState("Birthday");
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeSubfolder, setActiveSubfolder] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
   const [lightboxItem, setLightboxItem] = useState<any>(null);
@@ -611,11 +701,10 @@ const Gallery = () => {
   const videoRefs = useRef<Map<string, HTMLVideoElement>>(new Map());
   const observerRef = useRef<IntersectionObserver | null>(null);
 
-  const categories = galleryCategories;
-
-  const activeCat = categories.find((c) => c.id === activeCategory)!;
+  const activeCat = galleryCategories.find((c) => c.id === activeCategory);
 
   const getAllItems = (): any[] => {
+    if (!activeCat) return [];
     if (!activeCat.subfolders) return activeCat.items as any[];
     const key = activeSubfolder || activeCat.subfolders[0];
     return (activeCat.items as any)[key] || [];
@@ -646,13 +735,13 @@ const Gallery = () => {
       (entries) => {
         entries.forEach((entry) => {
           const video = entry.target as HTMLVideoElement;
-          if (entry.isIntersecting) { video.play().catch(() => {}); }
-          else { video.pause(); }
+          if (entry.isIntersecting) video.play().catch(() => {});
+          else video.pause();
         });
       },
       { threshold: 0.3 }
     );
-    videoRefs.current.forEach((video) => { observerRef.current?.observe(video); });
+    videoRefs.current.forEach((video) => observerRef.current?.observe(video));
     return () => observerRef.current?.disconnect();
   }, [displayItems, activeCategory, activeSubfolder]);
 
@@ -683,11 +772,21 @@ const Gallery = () => {
     setLightboxItem(allItems[next]);
   };
 
+  // Category cover images for the landing cards
+  const categoryCoverImages: Record<string, any> = {
+    Birthday: birthday,
+    HaldiMehndi: h5,
+    Wedding: wedding,
+    MataKiChowki: matakichowki,
+    Corporate: coperatee,
+  };
+
   return (
     <section id="gallery" className="py-20 md:py-40 bg-warm-bg relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6">
+        {/* Header */}
         <div className="text-center mb-16">
           <span className="text-secondary font-serif italic text-2xl mb-4 block">A Visual Narrative</span>
           <h2 className="text-5xl md:text-8xl font-display mb-8 tracking-tighter">
@@ -698,164 +797,222 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex flex-wrap gap-3 justify-center mb-6">
-          {categories.map((cat) => {
-            const Icon = cat.icon;
-            const isActive = activeCategory === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => handleCategoryChange(cat.id)}
-                className={`flex items-center gap-2 px-5 md:px-7 py-3 rounded-full font-bold uppercase text-[10px] md:text-[11px] tracking-[0.3em] transition-all duration-300 border ${
-                  isActive
-                    ? "bg-primary text-secondary border-secondary shadow-lg scale-105"
-                    : "bg-white text-primary border-primary/20 hover:border-secondary hover:text-secondary"
-                }`}
-              >
-                <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                <span className="hidden sm:inline">{cat.label}</span>
-                <span className="sm:hidden">{cat.label.split(" ")[0]}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Subfolder Pills */}
-        <AnimatePresence mode="wait">
-          {activeCat.subfolders && (
-            <motion.div
-              key={activeCategory + "-sub"}
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25 }}
-              className="flex flex-wrap gap-2 justify-center mb-10"
-            >
-              {activeCat.subfolders.map((sub) => {
-                const isActive = (activeSubfolder || activeCat.subfolders![0]) === sub;
-                const subItems = (activeCat.items as any)[sub] || [];
-                return (
-                  <button
-                    key={sub}
-                    onClick={() => handleSubfolderChange(sub)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.25em] transition-all border ${
-                      isActive
-                        ? "gold-gradient text-primary border-secondary shadow-md"
-                        : "bg-white/60 text-primary/60 border-primary/15 hover:border-secondary/50 hover:text-primary"
-                    }`}
-                  >
-                    {sub}
-                    <span className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold ${isActive ? "bg-primary/20 text-primary" : "bg-primary/10 text-primary/50"}`}>
-                      {subItems.length}
-                    </span>
-                  </button>
-                );
-              })}
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <div className="text-center mb-8">
-          <span className="text-primary/40 text-[10px] font-bold uppercase tracking-[0.4em]">
-            Showing {Math.min(visibleCount, allItems.length)} of {allItems.length} moments
-          </span>
-        </div>
-
-        {/* Masonry Grid */}
-        <AnimatePresence mode="wait">
+        {/* ── LANDING: Category Selection Cards ── */}
+        {!activeCategory && (
           <motion.div
-            key={activeCategory + (activeSubfolder || "")}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-6 space-y-0"
-            style={{ columnGap: "1.25rem" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto"
           >
-            {displayItems.map((item: any, i: number) => {
-              const videoKey = `${activeCategory}-${activeSubfolder || "main"}-${i}`;
+            {galleryCategories.map((cat, i) => {
+              const Icon = cat.icon;
+              const coverImg = categoryCoverImages[cat.id];
+              const itemCount = Array.isArray(cat.items)
+                ? cat.items.length
+                : Object.values(cat.items as Record<string, any[]>)[0]?.length || 0;
               return (
                 <motion.div
-                  key={videoKey}
-                  initial={{ opacity: 0, y: 16 }}
+                  key={cat.id}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: Math.min(i * 0.04, 0.4), duration: 0.35 }}
-                  onClick={() => openLightbox(item, i)}
-                  className="relative overflow-hidden rounded-2xl group cursor-pointer mb-4 md:mb-5 break-inside-avoid elegant-shadow"
-                  style={{ display: "inline-block", width: "100%" }}
+                  transition={{ delay: i * 0.08 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  onClick={() => handleCategoryChange(cat.id)}
+                  className="relative overflow-hidden rounded-3xl cursor-pointer group elegant-shadow aspect-[3/4]"
                 >
-                  {item.type === "video" ? (
-                    <video
-                      ref={(el) => registerVideo(videoKey, el)}
-                      src={item.url}
-                      muted
-                      loop
-                      playsInline
-                      preload="metadata"
-                      className="w-full object-cover transition-transform duration-700 group-hover:scale-105 block"
-                    />
-                  ) : (
-                    <img
-                      src={item.url}
-                      alt={item.title}
-                      loading="lazy"
-                      className="w-full object-cover transition-transform duration-700 group-hover:scale-105 block"
-                    />
-                  )}
+                  <img
+                    src={coverImg}
+                    alt={cat.label}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent"></div>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex flex-col justify-end p-5">
-                    <span className="text-secondary text-[8px] font-bold tracking-[0.4em] uppercase mb-1">{item.tag}</span>
-                    <h3 className="text-white font-display text-lg leading-tight">{item.title}</h3>
-                    <span className="mt-2 inline-flex items-center gap-1 text-secondary/80 text-[9px] font-bold uppercase tracking-wider">
-                      <Sparkles className="w-2.5 h-2.5" /> Tap to view
-                    </span>
-                  </div>
-
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-primary/70 backdrop-blur-md text-secondary text-[8px] font-bold tracking-[0.25em] uppercase px-2.5 py-1 rounded-full">
-                      {item.tag}
-                    </span>
-                  </div>
-
-                  {item.type === "video" && (
-                    <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-secondary/90 flex items-center justify-center">
-                      <div className="w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[8px] border-l-primary ml-0.5"></div>
+                  {/* Top badge */}
+                  <div className="absolute top-4 left-4">
+                    <div className="bg-secondary/20 backdrop-blur-md p-2.5 rounded-xl border border-secondary/30">
+                      <Icon className="w-4 h-4 text-secondary" />
                     </div>
-                  )}
+                  </div>
+
+                  {/* Bottom info */}
+                  <div className="absolute bottom-0 p-5 md:p-7 text-white w-full">
+                    <h3 className="text-xl md:text-2xl font-display mb-1 leading-tight">{cat.label}</h3>
+                    <div className="flex items-center justify-between">
+                      <span className="text-secondary/80 text-[10px] font-bold uppercase tracking-[0.3em]">
+                        {itemCount}+ moments
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0">
+                        <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-primary stroke-2">
+                          <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Subfolder preview pills */}
+                    {cat.subfolders && (
+                      <div className="flex flex-wrap gap-1.5 mt-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        {cat.subfolders.slice(0, 3).map((sub) => (
+                          <span key={sub} className="text-[8px] bg-white/10 backdrop-blur-sm text-white/80 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
+                            {sub}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </motion.div>
               );
             })}
           </motion.div>
-        </AnimatePresence>
-
-        {hasMore && (
-          <div className="text-center mt-14">
-            <motion.button
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              onClick={() => setVisibleCount((v) => v + ITEMS_PER_PAGE)}
-              className="gold-gradient text-primary px-14 py-5 rounded-full font-display font-bold text-base hover:shadow-2xl transition-all shadow-lg inline-flex items-center gap-3"
-            >
-              Load More Moments <Sparkles className="w-4 h-4" />
-            </motion.button>
-            <p className="mt-4 text-primary/30 text-[10px] font-bold uppercase tracking-[0.4em]">
-              {allItems.length - visibleCount} more moments await
-            </p>
-          </div>
         )}
 
-        {!hasMore && allItems.length > ITEMS_PER_PAGE && (
-          <div className="text-center mt-14">
-            <div className="ornate-divider max-w-xs mx-auto">
-              <Star className="text-secondary/40 w-4 h-4" />
+        {/* ── GRID VIEW: After category selected ── */}
+        {activeCategory && activeCat && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.35 }}
+          >
+            {/* Back button + Category Title */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+              <button
+                onClick={() => { setActiveCategory(null); setActiveSubfolder(null); setVisibleCount(ITEMS_PER_PAGE); }}
+                className="flex items-center gap-2 text-primary/60 hover:text-primary transition-colors text-xs font-bold uppercase tracking-[0.3em] group"
+              >
+                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current stroke-2 group-hover:-translate-x-1 transition-transform">
+                  <path d="M19 12H5M12 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                All Categories
+              </button>
+              <div className="hidden sm:block w-px h-4 bg-primary/20"></div>
+              <div className="flex items-center gap-3">
+                {(() => { const Icon = activeCat.icon; return <Icon className="w-4 h-4 text-secondary" />; })()}
+                <h3 className="text-lg font-display text-primary">{activeCat.label}</h3>
+              </div>
             </div>
-            <p className="mt-4 text-primary/30 text-[10px] font-bold uppercase tracking-[0.4em]">All moments unveiled</p>
-          </div>
+
+            {/* Subfolder Pills */}
+            <AnimatePresence mode="wait">
+              {activeCat.subfolders && (
+                <motion.div
+                  key={activeCategory + "-sub"}
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.25 }}
+                  className="flex flex-wrap gap-2 mb-8"
+                >
+                  {activeCat.subfolders.map((sub) => {
+                    const isActive = (activeSubfolder || activeCat.subfolders![0]) === sub;
+                    const subItems = (activeCat.items as any)[sub] || [];
+                    return (
+                      <button
+                        key={sub}
+                        onClick={() => handleSubfolderChange(sub)}
+                        className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.25em] transition-all border ${
+                          isActive
+                            ? "gold-gradient text-primary border-secondary shadow-md"
+                            : "bg-white/60 text-primary/60 border-primary/15 hover:border-secondary/50 hover:text-primary"
+                        }`}
+                      >
+                        {sub}
+                        <span className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold ${isActive ? "bg-primary/20 text-primary" : "bg-primary/10 text-primary/50"}`}>
+                          {subItems.length}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Count */}
+            <div className="mb-6">
+              <span className="text-primary/40 text-[10px] font-bold uppercase tracking-[0.4em]">
+                Showing {Math.min(visibleCount, allItems.length)} of {allItems.length} moments
+              </span>
+            </div>
+
+            {/* Masonry Grid */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeCategory + (activeSubfolder || "")}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-6"
+                style={{ columnGap: "1.25rem" }}
+              >
+                {displayItems.map((item: any, i: number) => {
+                  const videoKey = `${activeCategory}-${activeSubfolder || "main"}-${i}`;
+                  return (
+                    <motion.div
+                      key={videoKey}
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: Math.min(i * 0.04, 0.4), duration: 0.35 }}
+                      onClick={() => openLightbox(item, i)}
+                      className="relative overflow-hidden rounded-2xl group cursor-pointer mb-4 md:mb-5 break-inside-avoid elegant-shadow"
+                      style={{ display: "inline-block", width: "100%" }}
+                    >
+                      {item.type === "video" ? (
+                        <video
+                          ref={(el) => registerVideo(videoKey, el)}
+                          src={item.url}
+                          muted loop playsInline preload="metadata"
+                          className="w-full object-cover transition-transform duration-700 group-hover:scale-105 block"
+                        />
+                      ) : (
+                        <img
+                          src={item.url}
+                          alt={item.title}
+                          loading="lazy"
+                          className="w-full object-cover transition-transform duration-700 group-hover:scale-105 block"
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex flex-col justify-end p-5">
+                        <span className="text-secondary text-[8px] font-bold tracking-[0.4em] uppercase mb-1">{item.tag}</span>
+                        <h3 className="text-white font-display text-lg leading-tight">{item.title}</h3>
+                        <span className="mt-2 inline-flex items-center gap-1 text-secondary/80 text-[9px] font-bold uppercase tracking-wider">
+                          <Sparkles className="w-2.5 h-2.5" /> Tap to view
+                        </span>
+                      </div>
+                      <div className="absolute top-3 left-3">
+                        <span className="bg-primary/70 backdrop-blur-md text-secondary text-[8px] font-bold tracking-[0.25em] uppercase px-2.5 py-1 rounded-full">
+                          {item.tag}
+                        </span>
+                      </div>
+                      {item.type === "video" && (
+                        <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-secondary/90 flex items-center justify-center">
+                          <div className="w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[8px] border-l-primary ml-0.5"></div>
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+            </AnimatePresence>
+
+            {hasMore && (
+              <div className="text-center mt-14">
+                <motion.button
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() => setVisibleCount((v) => v + ITEMS_PER_PAGE)}
+                  className="gold-gradient text-primary px-14 py-5 rounded-full font-display font-bold text-base hover:shadow-2xl transition-all shadow-lg inline-flex items-center gap-3"
+                >
+                  Load More Moments <Sparkles className="w-4 h-4" />
+                </motion.button>
+                <p className="mt-4 text-primary/30 text-[10px] font-bold uppercase tracking-[0.4em]">
+                  {allItems.length - visibleCount} more moments await
+                </p>
+              </div>
+            )}
+          </motion.div>
         )}
       </div>
 
-      {/* Lightbox */}
+      {/* Lightbox — unchanged */}
       <AnimatePresence>
         {lightboxItem && (
           <motion.div
@@ -865,32 +1022,15 @@ const Gallery = () => {
             onClick={() => setLightboxItem(null)}
             className="fixed inset-0 z-[200] bg-black/97 backdrop-blur-2xl flex items-center justify-center p-4"
           >
-            <button
-              onClick={(e) => { e.stopPropagation(); navigateLightbox(-1); }}
-              className="absolute left-3 md:left-8 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-secondary/80 flex items-center justify-center transition-colors"
-            >
-              <svg viewBox="0 0 24 24" className="w-5 h-5 text-white fill-none stroke-current stroke-2">
-                <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <button onClick={(e) => { e.stopPropagation(); navigateLightbox(-1); }} className="absolute left-3 md:left-8 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-secondary/80 flex items-center justify-center transition-colors">
+              <svg viewBox="0 0 24 24" className="w-5 h-5 text-white fill-none stroke-current stroke-2"><path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
-
-            <motion.div
-              key={lightboxIndex}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative max-w-5xl w-full rounded-2xl overflow-hidden bg-black"
-            >
-              {lightboxItem.type === "video" ? (
-                <video src={lightboxItem.url} autoPlay controls loop playsInline className="w-full max-h-[80vh] object-contain" />
-              ) : (
-                <img src={lightboxItem.url} alt={lightboxItem.title} className="w-full max-h-[80vh] object-contain" />
-              )}
-              <button
-                onClick={() => setLightboxItem(null)}
-                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-              >
+            <motion.div key={lightboxIndex} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} onClick={(e) => e.stopPropagation()} className="relative max-w-5xl w-full rounded-2xl overflow-hidden bg-black">
+              {lightboxItem.type === "video"
+                ? <video src={lightboxItem.url} autoPlay controls loop playsInline className="w-full max-h-[80vh] object-contain" />
+                : <img src={lightboxItem.url} alt={lightboxItem.title} className="w-full max-h-[80vh] object-contain" />
+              }
+              <button onClick={() => setLightboxItem(null)} className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                 <X className="w-4 h-4 text-white" />
               </button>
               <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/90 to-transparent">
@@ -903,27 +1043,9 @@ const Gallery = () => {
                 </div>
               </div>
             </motion.div>
-
-            <button
-              onClick={(e) => { e.stopPropagation(); navigateLightbox(1); }}
-              className="absolute right-3 md:right-8 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-secondary/80 flex items-center justify-center transition-colors"
-            >
-              <svg viewBox="0 0 24 24" className="w-5 h-5 text-white fill-none stroke-current stroke-2">
-                <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <button onClick={(e) => { e.stopPropagation(); navigateLightbox(1); }} className="absolute right-3 md:right-8 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-secondary/80 flex items-center justify-center transition-colors">
+              <svg viewBox="0 0 24 24" className="w-5 h-5 text-white fill-none stroke-current stroke-2"><path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
-
-            {allItems.length <= 20 && (
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5">
-                {allItems.map((_: any, i: number) => (
-                  <button
-                    key={i}
-                    onClick={(e) => { e.stopPropagation(); setLightboxIndex(i); setLightboxItem(allItems[i]); }}
-                    className={`rounded-full transition-all ${i === lightboxIndex ? "w-5 h-1.5 bg-secondary" : "w-1.5 h-1.5 bg-white/30"}`}
-                  />
-                ))}
-              </div>
-            )}
           </motion.div>
         )}
       </AnimatePresence>
