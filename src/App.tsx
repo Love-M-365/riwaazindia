@@ -139,6 +139,13 @@ import w89 from "./assets/w89.jpeg";
 import w90 from "./assets/w90.mp4";
 import w98 from "./assets/w98.mp4";
 import w200 from "./assets/w200.mp4";
+import w231 from "./assets/w231.mp4";
+import w232 from "./assets/w232.mp4";
+import w233 from "./assets/w233.mp4";
+import w234 from "./assets/w234.mp4";
+import w235 from "./assets/w235.mp4";
+import w236 from "./assets/w236.mp4";
+import w237 from "./assets/w237.mp4";
 import coperatee from "./assets/coperate.jpg";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -184,6 +191,7 @@ import b210 from "./assets/b210.jpeg";
 import b211 from "./assets/b211.jpeg";
 import b212 from "./assets/b212.mp4";
 import b213 from "./assets/b213.jpeg";
+import { i } from "motion/react-client";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -494,6 +502,13 @@ const galleryCategories = [
         { type: "video", url: w200, title: "Wedding Cinematic",   tag: "WEDDING" },
       ],
       "Bridal Entry": [
+        { type: "video", url: w231, title: "Bridal Entry 1",      tag: "BRIDAL ENTRY" },
+        { type: "video", url: w232, title: "Bridal Entry 2",      tag: "BRIDAL ENTRY" },
+        { type: "video", url: w233, title: "Bridal Entry 3",      tag: "BRIDAL ENTRY" },
+        { type: "video", url: w234, title: "Bridal Entry 4",      tag: "BRIDAL ENTRY" },
+        { type: "video", url: w235, title: "Bridal Entry 5",      tag: "BRIDAL ENTRY" },
+        { type: "video", url: w236, title: "Bridal Entry 6",      tag: "BRIDAL ENTRY" },
+        { type: "video", url: w237, title: "Bridal Entry 7",      tag: "BRIDAL ENTRY" },  
         { type: "video", url: w1,   title: "The Grand Entry",     tag: "BRIDAL ENTRY" },
         { type: "video", url: w14,  title: "Baraat Entry",        tag: "BRIDAL ENTRY" },
         { type: "video", url: w20,  title: "Wedding Reel",        tag: "BRIDAL ENTRY" },
@@ -501,6 +516,7 @@ const galleryCategories = [
         { type: "video", url: w29,  title: "Entrance Arch",       tag: "BRIDAL ENTRY" }, // Fixed to video (.mp4)
         { type: "video", url: w31,  title: "Floral Walkway",      tag: "BRIDAL ENTRY" }, // Fixed to video (.mp4)
         { type: "video", url: w98,  title: "Eternal Walk",        tag: "BRIDAL ENTRY" },
+        
       ],
       "Haldi & Mehndi": [
         { type: "video", url: w3,   title: "Haldi Ceremony",      tag: "HALDI" },
