@@ -5,8 +5,9 @@ import matakichowki from "./assets/MataKiChowki.jpg";
 import wedding from "./assets/wedding.jpg";
 import birthday from "./assets/birthday.jpg";
 import events from "./assets/events.jpg";
+import { BrowserRouter as Router, Routes, Route , Link } from 'react-router-dom';
 import auris from "./assets/auris.jpeg";
-
+import WeddingServicePage from "./assets/services/wedding";
 // ─── Birthday Assets ───────────────────────────────────────────────────────────
 import b1  from "./assets/b1.jpeg";
 import b2  from "./assets/b2.mp4";
@@ -192,6 +193,11 @@ import b211 from "./assets/b211.jpeg";
 import b212 from "./assets/b212.mp4";
 import b213 from "./assets/b213.jpeg";
 import { i } from "motion/react-client";
+import BirthdayServicePage from "./assets/services/birthday";
+import path from "path";
+import MataKiChowkiServicePage from "./assets/services/matakichowki";
+import CorporateServicePage from "./assets/services/cooperate";
+import EventDecorationsPage from "./assets/services/events";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -231,7 +237,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/919540598999?text=Hello%20Indian%20Riwaaz!%20I%20would%20like%20to%20inquire%20about%20booking%20an%20event."
+            href="https://wa.me/918595633810?text=Hello%20Indian%20Riwaaz!%20I%20would%20like%20to%20inquire%20about%20booking%20an%20event."
             target="_blank"
             rel="noopener noreferrer"
             className="gold-gradient text-primary px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.3em] hover:scale-105 transition-all shadow-xl active:scale-95"
@@ -268,7 +274,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="https://wa.me/919540598999?text=Hello%20Indian%20Riwaaz!%20I%20would%20like%20to%20inquire%20about%20booking%20an%20event."
+                href="https://wa.me/918595633810?text=Hello%20Indian%20Riwaaz!%20I%20would%20like%20to%20inquire%20about%20booking%20an%20event."
                 className="w-full gold-gradient text-primary py-6 rounded-full text-center text-xs font-bold uppercase tracking-[0.4em] shadow-xl"
               >
                 Book Now
@@ -338,11 +344,10 @@ const Hero = () => (
     </motion.div>
   </section>
 );
-
 const ServiceCard = ({ title, description, icon: Icon, image }: any) => (
   <motion.div
     whileHover={{ y: -15 }}
-    className="group relative overflow-hidden rounded-[2.5rem] aspect-[3/4] elegant-shadow"
+    className="group relative overflow-hidden rounded-[2.5rem] aspect-[3/4] elegant-shadow cursor-pointer"
   >
     <img
       src={image}
@@ -350,73 +355,124 @@ const ServiceCard = ({ title, description, icon: Icon, image }: any) => (
       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
       referrerPolicy="no-referrer"
     />
-    <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/20 to-transparent"></div>
-    <div className="absolute bottom-0 p-10 text-white">
-      <div className="bg-secondary/20 backdrop-blur-md p-4 rounded-2xl w-fit mb-6 border border-secondary/30">
+    <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/20 to-transparent" />
+
+    {/* ── "Tap to Explore" pill — always visible on mobile, fades on hover on desktop ── */}
+   
+    <div className="absolute bottom-0 p-8 md:p-10 text-white w-full">
+      <div className="bg-secondary/20 backdrop-blur-md p-4 rounded-2xl w-fit mb-5 border border-secondary/30">
         <Icon className="w-6 h-6 text-secondary" />
       </div>
-      <h3 className="text-3xl font-display mb-3">{title}</h3>
-      <p className="text-sm text-white/70 font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0">
+      <h3 className="text-2xl md:text-3xl font-display mb-2">{title}</h3>
+
+      {/* description — always visible, slightly more opaque so it reads as a teaser */}
+      <p className="text-sm text-white/70 font-light leading-relaxed mb-4
+                    opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500
+                    transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0">
         {description}
       </p>
+
+      {/* CTA row */}
+      <div className="flex items-center gap-2 text-secondary
+                      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 delay-75
+                      transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0">
+        <span className="text-[10px] font-bold uppercase tracking-[0.3em]">View Full Page</span>
+        <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+          <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-none stroke-primary stroke-[2.5]">
+            <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+      </div>
     </div>
+
+    {/* subtle gold border pulse on hover */}
+    <div className="absolute inset-0 rounded-[2.5rem] border-2 border-secondary/0 group-hover:border-secondary/40 transition-all duration-500 pointer-events-none" />
   </motion.div>
 );
 
 const Services = () => {
   const services = [
-    
     {
       title: "Wedding",
       description: "Opulent and culturally rich wedding decor, blending traditional Indian aesthetics with modern elegance.",
       icon: Star,
       image: wedding,
+      path: "services/wedding",
     },
     {
       title: "Mata Chowki",
       description: "Divine and spiritual arrangements for Mata Chowki with traditional decor, lighting, and seating.",
       icon: Music,
       image: matakichowki,
+      path: "services/matakichowki",
     },
     {
       title: "Birthday Magic",
       description: "Creative and colorful decorations for birthdays, from themed parties to elegant celebrations.",
       icon: Sparkles,
       image: birthday,
+      path: "services/birthday",
     },
     {
       title: "Event Decorations",
       description: "Bespoke floral and thematic decorations for weddings, parties, and corporate events.",
       icon: Flower2,
       image: events,
+      path: "services/events",
     },
     {
       title: "Corporate Events",
       description: "Sophisticated and professional decor for corporate events, conferences, and product launches.",
       icon: Building2,
       image: coperatee,
+      path: "services/corporate",
     },
   ];
 
   return (
     <section id="services" className="py-20 md:py-40 bg-white relative">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-32">
+        <div className="text-center mb-24 md:mb-32">
           <span className="text-secondary font-serif italic text-2xl mb-4 block">Our Craftsmanship</span>
-          <h2 className="text-5xl md:text-8xl font-display tracking-tighter mb-8">Majestic <span className="italic font-serif text-primary">Offerings</span></h2>
+          <h2 className="text-5xl md:text-8xl font-display tracking-tighter mb-8">
+            Majestic <span className="italic font-serif text-primary">Offerings</span>
+          </h2>
           <div className="ornate-divider max-w-xl mx-auto">
             <Flower2 className="text-secondary w-6 h-6" />
           </div>
+
+          {/* ── Clickability hint below the divider ── */}
+          <p className="mt-10 text-primary/40 text-[11px] font-bold uppercase tracking-[0.45em] flex items-center justify-center gap-2">
+            <span>Tap any service to explore the full page</span>
+            <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-none stroke-current stroke-2 animate-bounce">
+              <path d="M12 5v14M5 12l7 7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </p>
         </div>
-      
-<div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
-  {services.map((s, i) => <ServiceCard key={i} {...s} />)}
-</div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
+          {services.map((s, i) => (
+            <Link
+              key={i}
+              to={s.path}
+              className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-[2.5rem]"
+              aria-label={`Explore ${s.title} service page`}
+            >
+              <ServiceCard {...s} />
+            </Link>
+          ))}
+        </div>
+
+        {/* ── Bottom helper row ── */}
+        <div className="flex items-center justify-center gap-3 mt-16 text-primary/30">
+          <div className="w-8 h-px bg-primary/20" />
+          <span className="text-[10px] font-bold uppercase tracking-[0.4em]">Each card opens a dedicated service page</span>
+          <div className="w-8 h-px bg-primary/20" />
+        </div>
       </div>
     </section>
   );
 };
-
 // ─── Gallery Data ──────────────────────────────────────────────────────────────
 const galleryCategories = [
   {
@@ -1366,7 +1422,7 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus('sending');
     const message = `*Royal Inquiry from Indian Riwaaz Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Event:* ${formData.eventType}%0A*Vision:* ${formData.vision}`;
-    const whatsappUrl = `https://wa.me/919540598999?text=${message}`;
+    const whatsappUrl = `https://wa.me/918595633810?text=${message}`;
     setTimeout(() => { window.open(whatsappUrl, '_blank'); setStatus('sent'); }, 1000);
   };
 
@@ -1391,7 +1447,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-secondary/60 text-xs font-bold uppercase tracking-[0.3em] mb-2">Royal Line</p>
-                    <p className="text-xl font-light">+91 95405 98999</p>
+                    <p className="text-xl font-light">+91 8595633810</p>
                     <p className="text-xl font-light">+91 85956 33810</p>
                   </div>
                 </div>
@@ -1520,7 +1576,7 @@ const Footer = () => (
 
 const WhatsAppButton = () => (
   <motion.a
-    href="https://wa.me/919540598999?text=Hello%20Indian%20Riwaaz!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20royal%20event."
+    href="https://wa.me/918595633810?text=Hello%20Indian%20Riwaaz!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20royal%20event."
     target="_blank"
     rel="noopener noreferrer"
     initial={{ scale: 0, opacity: 0, y: 20 }}
@@ -1536,20 +1592,41 @@ const WhatsAppButton = () => (
     </span>
   </motion.a>
 );
+// ─────────────────────────────────────────────────────────────────────────────
+// REPLACE your existing App() export at the bottom of app.jsx with this:
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function App() {
   return (
-    <div className="selection:bg-primary selection:text-white">
-      <RoyalOfferModal />
-      <Navbar />
-      <Hero />
-      <Services />
-      <Gallery />
-      <ImperialOfferSection />
-      <SignatureVenue />
-      <ContactForm />
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <Router>
+      <div className="selection:bg-primary selection:text-white">
+        <Routes>
+          {/* ── MAIN HOME PAGE (with global nav, modal, footer) ── */}
+          <Route path="/" element={
+            <>
+              <RoyalOfferModal />
+              <Navbar />
+              <Hero />
+              <Services />
+             
+              <ImperialOfferSection />
+              <SignatureVenue />
+              <ContactForm />
+              <Footer />
+              <WhatsAppButton />
+            </>
+          } />
+
+          {/* ── BIRTHDAY SERVICE PAGE (self-contained, own nav + footer) ── */}
+          {/* BirthdayServicePage renders its OWN navbar, footer, and WhatsApp btn */}
+          <Route path="/services/birthday" element={<BirthdayServicePage />} />
+          <Route path="/services/wedding" element={<WeddingServicePage />} />
+          <Route path="/services/matakichowki" element={<MataKiChowkiServicePage />} />
+          <Route path="/services/corporate" element={<CorporateServicePage />} />
+          <Route path="/services/events" element={<EventDecorationsPage />} />
+          {/* Add more service pages here — each should be self-contained */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
