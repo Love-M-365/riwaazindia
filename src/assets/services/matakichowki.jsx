@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 // ─── Mata Ki Chowki Assets (paths match your app.jsx imports) ─────────────────
@@ -759,7 +760,15 @@ export default function MataKiChowkiServicePage() {
   const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div style={{ fontFamily: "'Outfit',sans-serif", background: "#fff", color: "#1a1a1a", minHeight: "100vh" }}>
+    <>
+      <Helmet>
+        <title>Mata Ki Chowki Decoration & Event Services</title>
+        <meta
+          name="description"
+          content="Riwaaz India offers Mata Ki Chowki decoration, bhajan groups, floral decor, diya lighting, pandal setup, prasad, and complete puja services in Delhi NCR."
+        />
+      </Helmet>
+      <div style={{ fontFamily: "'Outfit',sans-serif", background: "#fff", color: "#1a1a1a", minHeight: "100vh" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
         *{box-sizing:border-box;margin:0;padding:0;}
@@ -799,7 +808,7 @@ export default function MataKiChowkiServicePage() {
       {/* ── HERO ── */}
       <section style={{ minHeight: "92vh", display: "flex", alignItems: "flex-end", position: "relative", overflow: "hidden", paddingTop: 80 }}>
         <div style={{ position: "absolute", inset: 0 }}>
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1600&auto=format&fit=crop" referrerPolicy="no-referrer" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(.20) saturate(1.3)" }} />
+          <img src="https://images.unsplash.com/photo-1761471682709-acdb02568da5?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" referrerPolicy="no-referrer" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(.20) saturate(1.3)" }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,#fff 0%,rgba(255,255,255,.05) 42%,transparent 100%)" }} />
           <div style={{ position: "absolute", top: "18%", right: "8%", width: 320, height: 320, borderRadius: "50%", background: "radial-gradient(circle,rgba(212,175,55,.2) 0%,transparent 70%)", pointerEvents: "none" }} />
         </div>
@@ -952,5 +961,6 @@ export default function MataKiChowkiServicePage() {
 
       <ServiceFooter />
     </div>
+    </>
   );
 }

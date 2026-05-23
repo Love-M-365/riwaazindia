@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 // ─── Corporate Assets ─────────────────────────────────────────────────────────
@@ -681,7 +682,15 @@ const ServiceFooter = () => (
 export default function CorporateServicePage() {
   const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   return (
-    <div style={{ fontFamily: "'Outfit',sans-serif", background: "#fff", color: "#1a1a1a", minHeight: "100vh" }}>
+    <>
+      <Helmet>
+        <title>Best Corporate Event Management Company in Delhi NCR | Riwaaz India</title>
+        <meta
+          name="description"
+          content="Discover Riwaaz India, the best corporate event management company in Delhi NCR, offering flawless planning, premium decor, branding, entertainment, and seamless execution."
+        />
+      </Helmet>
+      <div style={{ fontFamily: "'Outfit',sans-serif", background: "#fff", color: "#1a1a1a", minHeight: "100vh" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
         *{box-sizing:border-box;margin:0;padding:0;}
@@ -815,5 +824,6 @@ export default function CorporateServicePage() {
       </section>
       <ServiceFooter />
     </div>
+    </>
   );
 }

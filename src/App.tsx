@@ -198,6 +198,7 @@ import path from "path";
 import MataKiChowkiServicePage from "./assets/services/matakichowki";
 import CorporateServicePage from "./assets/services/cooperate";
 import EventDecorationsPage from "./assets/services/events";
+import { Helmet } from "react-helmet-async";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -218,6 +219,17 @@ const Navbar = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+  <title>
+    Riwaaz India | Luxury Wedding & Event Decor Services
+  </title>
+
+  <meta
+    name="description"
+    content="Riwaaz India offers luxury wedding, birthday, Mata Ki Chowki, and corporate event decoration services with royal elegance across Delhi NCR."
+  />
+</Helmet>
     <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${scrolled ? 'py-4 bg-primary/95 backdrop-blur-2xl shadow-2xl' : 'py-8 bg-transparent'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-4 group cursor-pointer">
@@ -284,6 +296,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
+    </>
   );
 };
 

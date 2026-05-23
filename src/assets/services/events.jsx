@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 // ─── Event Decoration Assets — reusing all available assets across categories ──
@@ -764,7 +765,15 @@ const ServiceFooter = () => (
 export default function EventDecorationsPage() {
   const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   return (
-    <div style={{ fontFamily: "'Outfit',sans-serif", background: "#fff", color: "#1a1a1a", minHeight: "100vh" }}>
+    <>
+      <Helmet>
+        <title>Luxury Event Decorations and Party Decor Services</title>
+        <meta
+          name="description"
+          content="Riwaaz India creates stunning event decorations with balloon decor, floral styling, lighting, stage backdrops, ceiling setups, and photo booths in Delhi NCR."
+        />
+      </Helmet>
+      <div style={{ fontFamily: "'Outfit',sans-serif", background: "#fff", color: "#1a1a1a", minHeight: "100vh" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
         *{box-sizing:border-box;margin:0;padding:0;}
@@ -905,5 +914,6 @@ export default function EventDecorationsPage() {
 
       <ServiceFooter />
     </div>
+    </>
   );
 }
